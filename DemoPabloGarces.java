@@ -12,10 +12,16 @@ public class DemoPabloGarces {
 
             System.out.print("Enter Parcel ID: ");
             landParcel.setParcelId(scanner.nextInt());
-
+            
             System.out.print("Enter Parcel Size (acres): ");
-            landParcel.setParcelSize(scanner.nextDouble());
-
+            double parcelSizeInput = scanner.nextDouble();
+            while (parcelSizeInput <= 0) 
+            {
+                System.out.print("Please enter a valid number: ");
+                parcelSizeInput = scanner.nextDouble();
+            }
+            landParcel.setParcelSize(parcelSizeInput);
+            
             System.out.print("Enter Zoning Type (Residential/Commercial): ");
             landParcel.setZoningType(scanner.next());
 
@@ -23,7 +29,13 @@ public class DemoPabloGarces {
             building.setStreetAddress(scanner.next());
 
             System.out.print("Enter Size of Building (sq. feet): ");
-            building.setSizeInSquareFeet(scanner.nextDouble());
+            double buildingSizeInput = scanner.nextDouble();
+            while (buildingSizeInput <= 0) 
+            {
+                System.out.print("Please enter a valid number: ");
+                buildingSizeInput = scanner.nextDouble();
+            }
+            building.setSizeInSquareFeet(buildingSizeInput);
 
             landParcel.setBuilding(building);
             landParcels.add(landParcel);
