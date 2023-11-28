@@ -12,7 +12,7 @@ public class LandParcel {
         this.parcelId = parcelId;
         this.parcelSize = parcelSize;
         this.zoningType = zoningType;
-        this.building = building;
+        this.building = new Building(building); //we use the copy contructor of the Policy class to avoid security holes
     }
 
     // Getters and setters

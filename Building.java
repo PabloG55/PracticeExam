@@ -11,6 +11,13 @@ class Building {
         this.sizeInSquareFeet = sizeInSquareFeet;
     }
 
+    //Copy constructor
+    public Building(Building object2)
+    {
+        streetAddress = object2.streetAddress;
+        sizeInSquareFeet = object2.sizeInSquareFeet;
+    }
+
     // Getters and setters
 
     public String getStreetAddress() {
